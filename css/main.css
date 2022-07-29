@@ -143,6 +143,7 @@ img {
 /* Header-styles */
 .header {
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .nav {
@@ -234,6 +235,23 @@ img {
   display: block;
 }
 
+.header-button.is-open .menu-burger {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: aqua;
+  padding: 48px 40px;
+}
+.menu-container.is-open {
+  display: block;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -313,6 +331,12 @@ img {
   transition: opacity 250ms linear;
 }
 
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 94px 15px;
+    overflow-y: scroll;
+  }
+}
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -326,24 +350,29 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 528px;
-  min-height: 581px;
+  position: relative;
   padding: 40px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.23, 0.79, 0.83, 0.67);
   transition: -webkit-transform 250ms cubic-bezier(0.23, 0.79, 0.83, 0.67);
   transition: transform 250ms cubic-bezier(0.23, 0.79, 0.83, 0.67);
   transition: transform 250ms cubic-bezier(0.23, 0.79, 0.83, 0.67), -webkit-transform 250ms cubic-bezier(0.23, 0.79, 0.83, 0.67);
 }
 
+@media screen and (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    min-height: 581px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+  }
+}
 .modal__button-close {
   position: absolute;
   top: 8px;

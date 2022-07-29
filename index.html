@@ -20,13 +20,16 @@
 
 
 
-                <button type="button" class="header-button is-open">
+                <button type="button" class="header-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                         <use class="close-burger" href="./img/symbol-defs.svg#close_burger"></use>
                         <use class="menu-burger" href="./img/symbol-defs.svg#menu_burger"></use>
                     </svg>            
-                </button>     
-                 
+                </button>  
+                
+                <div class="menu-container" id="menu-container" data-menu>
+                    menu-container
+                </div>
                 
                 
 
@@ -435,5 +438,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 </html>
