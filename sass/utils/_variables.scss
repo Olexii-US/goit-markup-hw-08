@@ -12,23 +12,3 @@
     --cubic-bezier-stand: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-%centered-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-%y-centered-flex {
-    display: flex;
-    align-items: center;
-}
-
-// Динамічна змінна
-
-// @mixin centeredFlex($type: flex) {
-//   display: $type;
-//   align-items: center;
-//   justify-content: center;
-// }
-// @include centeredFlex;

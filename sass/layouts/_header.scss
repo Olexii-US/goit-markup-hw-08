@@ -88,3 +88,22 @@
 .contacts__icon:hover {
     fill: var(--accent-colour);
 }
+
+// mobile
+
+.header-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    }
+
+.header-button .close-burger {
+    display: none;
+
+}
+
+.header-button.is-open .close-burger {
+    display: block;
+}
