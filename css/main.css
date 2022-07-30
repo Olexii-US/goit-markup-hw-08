@@ -12,7 +12,7 @@
   --cubic-bezier-stand: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients__link, .works__description, .feature__box, .checkbox, .modal__button-close, .social-links__link {
+.clients__link, .works__description, .feature__box, .modal__button-close, .social-links__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +24,7 @@
           justify-content: center;
 }
 
-.contacts__link, .nav__list, .header-box {
+.checkbox, .contacts__link, .nav__list, .header-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -398,9 +398,15 @@ img {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.5;
   margin-bottom: 12px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
+}
 /* client-form */
 .client-form__label {
   display: block;
@@ -481,8 +487,27 @@ img {
 
 /* checkbox */
 .checkbox {
-  line-height: 1.71;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  line-height: 1.17;
+  font-size: 12px;
   color: var(--secondary-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .checkbox {
+    line-height: 1.71;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .checkbox__input {
@@ -504,12 +529,17 @@ img {
 
 .checkbox__svg {
   position: absolute;
-  left: 54px;
+  left: 40px;
   width: 16px;
   height: 15px;
   background-image: url(../img/uncheck.svg);
 }
 
+@media screen and (min-width: 1200px) {
+  .checkbox__svg {
+    left: 54px;
+  }
+}
 .checkbox__input:checked + .checkbox__svg {
   background-image: url(../img/check.svg);
   opacity: 1;
