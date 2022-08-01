@@ -39,6 +39,10 @@
 .menu-container {
     background-color: var(--main-background);
 
+    // @media screen and (min-width: 480px) and (max-width: 767px) {
+    //     max-width: 480px;
+    // }
+
     @media screen and (max-width: 767px) {
         display: none;
         position: absolute;

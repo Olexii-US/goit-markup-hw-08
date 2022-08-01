@@ -7,15 +7,23 @@
     background-color: var(--alternative-background);
 
     &__list {
-        display: flex;
-        justify-content: space-between;
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin: -15px;
+            flex-wrap: wrap;
+        }
     }
 
     &__social-links {
-        margin-right: 32px;
-        margin-left: 32px;
-        margin-bottom: 30px;
-    }
+        @extend %centered-flex; 
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 30px;
+            }
+        }
 
     &__social-link {
         fill: #AFB1B8;
@@ -30,6 +38,13 @@
     }   
 }
 
+.team__social-links > .social-links__item {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 24px;
+    }    
+}
+
+
 /* team-card */
 
 .team-card {
@@ -39,8 +54,15 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 15px;
+        width: calc((100% - 2 * 30px) / 2);        
+    }
+
     &__img {
         margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &__title {
@@ -54,3 +76,67 @@
         margin-bottom: 16px;
     }
 }
+
+.team-card:not(:last-child) {
+        @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+}
+
+
+// /* наша команда */
+
+// .team {
+//     font-size: 16px;
+//     line-height: 1.19;
+
+//     background-color: var(--alternative-background);
+
+//     &__list {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     &__social-links {
+//         margin-right: 32px;
+//         margin-left: 32px;
+//         margin-bottom: 30px;
+//     }
+
+//     &__social-link {
+//         fill: #AFB1B8;
+
+//         transition: background-color 250ms var(--cubic-bezier-stand), fill 250ms var(--cubic-bezier-stand);
+//     }
+
+//     &__social-link:hover,
+//     &__social-link:focus {
+//         fill: var(--main-background);
+//         background-color: var(--accent-colour);
+//     }
+// }
+
+// /* team-card */
+
+// .team-card {
+//     background-color: var(--main-background);
+//     text-align: center;
+
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+//     border-radius: 0px 0px 4px 4px;
+
+//     &__img {
+//         margin-bottom: 30px;
+//     }
+
+//     &__title {
+//         font-weight: 500;
+//         margin-bottom: 10px;
+//         font-size: 16px;
+//     }
+
+//     &__text {
+//         color: var(--secondary-text-color);
+//         margin-bottom: 16px;
+//     }
+// }
