@@ -1,13 +1,8 @@
 .header-button {
     display: inline-flex;
 
-
-
     margin-top: 10px;
     margin-bottom: 10px;
-
-
-
 
     padding: 0;
     border: 0;
@@ -39,10 +34,6 @@
 .menu-container {
     background-color: var(--main-background);
 
-    // @media screen and (min-width: 480px) and (max-width: 767px) {
-    //     max-width: 480px;
-    // }
-
     @media screen and (max-width: 767px) {
         display: none;
         position: absolute;
@@ -59,13 +50,11 @@
 
     @media screen and (min-width: 768px) {
         display: flex;
-        // justify-content: space-between;
-
-
-        // flex-grow: 1;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 100%;
     }
 }
-
 
 .header-social {
     display: flex;
@@ -90,5 +79,7 @@
         color: var(--accent-colour);
     }
 
-
+    @media screen and (min-width: 768px) {
+        display: none;        
+    }
 }
