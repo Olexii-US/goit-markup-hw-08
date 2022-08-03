@@ -1,8 +1,13 @@
-.header-button {
+// .header-button
+.menu-toggle {
     display: inline-flex;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    // margin-top: 10px;
+    // margin-bottom: 10px;
 
     padding: 0;
     border: 0;
@@ -13,38 +18,47 @@
     @media screen and (min-width: 768px) {
         display: none;
     }
-    &:hover {
+    &:hover,
+    &:focus {
         fill: var(--accent-colour);
     }
 }
 
-.header-button .close-burger {
-    display: none;
 
-}
 
-.header-button.is-open .close-burger {
-    display: block;
-}
+// .header-button .close-burger {
+//     display: none;
 
-.header-button.is-open .menu-burger {
-    display: none;
-}
+// }
+
+// .header-button.is-open .close-burger {
+//     display: block;
+// }
+
+// .header-button.is-open .menu-burger {
+//     display: none;
+// }
 
 .menu-container {
     background-color: var(--main-background);
 
     @media screen and (max-width: 767px) {
-        display: none;
-        position: absolute;
-        top: 100%;
+        // display: none;
+        position: fixed;
+        top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
 
-        padding: 0px 40px 48px 40px;
+        padding: 48px 40px;
+
+        transform: translateX(100%);
+        transition: transform 250ms var(--cubic-bezier-stand);
+
+        // z-index: 999;
 
         &.is-open {
-            display: block;
+            transform: translateX(0);
         }
     }
 
