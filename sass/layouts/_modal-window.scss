@@ -15,10 +15,8 @@
     transition: opacity 250ms linear;
 
     @media screen and (max-width: 767px) {
-        .backdrop {
-            padding: 94px 15px;
-            overflow-y: scroll;
-        }
+        padding: 94px 15px;
+        overflow-y: scroll;
     }
 }
 
