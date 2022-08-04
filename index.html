@@ -51,7 +51,7 @@
                     </ul>
                     <ul class="header-social"> 
                         <li class="header-social__list">
-                            <a href="#" class="header-social__link"">Instagram</a>
+                            <a href="#" class="header-social__link">Instagram</a>
                         </li>
                         <li class="header-social__list">
                             <a href="#" class="header-social__link">Twitter</a>
@@ -127,15 +127,15 @@
                 <h2 class="secondary-title">Чем мы занимаемся</h2>
                 <ul class="works__list">
                     <li class="works__item">
-                        <img src="./img/box1.jpg" alt="Верстка сайтов" width="370">
+                        <img srcset="./img/box1.jpg 1x, ./img/box1@2x.jpg 2x" src="./img/box1.jpg" alt="Верстка сайтов">
                         <p class="works__description">Десктопные приложения</p>
                     </li>
                     <li class="works__item">
-                        <img src="./img/box2.jpg" alt="Создание мобильных приложений" width="370">
+                        <img srcset="./img/box2.jpg 1x, ./img/box2@2x.jpg 2x" src="./img/box2.jpg" alt="Создание мобильных приложений">
                         <p class="works__description">Мобильные приложения</p>
                     </li>
                     <li class="works__item">
-                        <img src="./img/box3.jpg" alt="Разработка дизайна" width="370">
+                        <img srcset="./img/box3.jpg 1x, ./img/box3@2x.jpg 2x" src="./img/box3.jpg" alt="Разработка дизайна">
                         <p class="works__description">Дизайнерские решения</p>
                     </li>
                 </ul>
@@ -147,8 +147,6 @@
                 <h2 class="secondary-title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team-card">
-
-
                         <picture>
                             <source srcset="./img/team1-pc.jpg 1x, ./img/team1-pc@2x.jpg 2x" media="(min-width: 1200px)">
 
@@ -158,9 +156,6 @@
 
                             <img src="./img/team1-pc.jpg" alt="Игорь Демьяненко" class="team-card__img">
                         </picture>
-
-
-
                         <h3 class="team-card__title">Игорь Демьяненко</h3>
                         <p class="team-card__text">Product Designer</p>
 
@@ -239,7 +234,15 @@
                         </ul>
                     </li>
                     <li class="team-card">
-                        <img src="./img/team3.jpg" alt="Николай Тарасов" width="270" class="team-card__img">
+                        <picture>
+                            <source srcset="./img/team3-pc.jpg 1x, ./img/team3-pc@2x.jpg 2x" media="(min-width: 1200px)">
+                        
+                            <source srcset="./img/team3-tab.jpg 1x, ./img/team3-tab@2x.jpg 2x" media="(min-width: 768px)">
+                        
+                            <source srcset="./img/team3-mob.jpg 1x, ./img/team3-mob@2x.jpg 2x" media="(max-width: 767px)">
+                        
+                            <img src="./img/team3-pc.jpg" alt="Николай Тарасов" class="team-card__img">
+                        </picture>
                         <h3 class="team-card__title">Николай Тарасов</h3>
                         <p class="team-card__text">Marketing</p>
                         <ul class="social-links team__social-links">
@@ -274,7 +277,15 @@
                         </ul>
                     </li>
                     <li class="team-card">
-                        <img src="./img/team4.jpg" alt="Михаил Ермаков" width="270" class="team-card__img">
+                        <picture>
+                            <source srcset="./img/team4-pc.jpg 1x, ./img/team4-pc@2x.jpg 2x" media="(min-width: 1200px)">
+                        
+                            <source srcset="./img/team4-tab.jpg 1x, ./img/team4-tab@2x.jpg 2x" media="(min-width: 768px)">
+                        
+                            <source srcset="./img/team4-mob.jpg 1x, ./img/team4-mob@2x.jpg 2x" media="(max-width: 767px)">
+                        
+                            <img src="./img/team4-pc.jpg" alt="Михаил Ермаков" class="team-card__img">
+                        </picture>
                         <h3 class="team-card__title">Михаил Ермаков</h3>
                         <p class="team-card__text">UI Designer</p>
                         <ul class="social-links team__social-links">
@@ -411,7 +422,7 @@
             <div class="footer__subscr">
                 <strong class="footer__strong">Подпишитесь на рассылку</strong>
                 <form class="subscr-form">
-                    <label>                 
+                    <label>               
                         <input class="subscr-form__input" type="email" name="user-email" placeholder="E-mail">
                     </label>
                     <button class="button subscr-form__button" type="submit">Подписаться
