@@ -949,13 +949,11 @@ img {
   background-color: var(--secondary-background);
   padding: 60px 0;
 }
-@media screen and (max-width: 1199px) {
-  .footer__logo {
-    display: block;
-    text-align: center;
-    padding: 0;
-    margin-bottom: 20px;
-  }
+.footer__logo {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 20px;
 }
 .footer__box {
   display: -webkit-box;
@@ -989,9 +987,6 @@ img {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
